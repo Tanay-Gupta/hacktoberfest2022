@@ -6,7 +6,8 @@ Hacktoberfest-2022
 
 
 **This is a beginner-friendly project to help you get started with your
-[hacktoberfest](https://hacktoberfest.digitalocean.com/). If you don't know where to start, feel free to watch the videos linked below, and read the contribution rules. Happy hacking <3 💙 !!**
+[hacktoberfest](https://hacktoberfest.digitalocean.com/). 
+Happy hacking <3 💙 !!**
 
 P.S. Star ⭐ and Share this repository, if you had fun!! 😍
 
