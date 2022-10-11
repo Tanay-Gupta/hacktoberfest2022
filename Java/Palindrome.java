@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 class Palindrome {
-
+ int digit=0;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -12,19 +12,18 @@ class Palindrome {
 
         while (n > 0) {
 
-            int digit;
+           
 
             digit = n % 10;
             rev = rev * 10 + digit;
-
             n = n / 10;
 
         }
 
         if (num == rev)
-            System.out.println("yes");
+            System.out.println("yes it is palindrome");
         else
-            System.out.println("no");
+            System.out.println("no it is not palindrome");
 
     }
 
