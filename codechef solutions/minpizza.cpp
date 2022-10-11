@@ -4,8 +4,8 @@ using namespace std;
 void solve(){
     double n,x;
     cin>>n>>x;
-    int d=ceil((n*x)/4);
-    cout<<d<<" ";
+    int dd=ceil((n*x)/4);
+    cout<<dd<<" ";
 }
 
 int main(){
