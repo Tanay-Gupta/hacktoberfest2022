@@ -22,6 +22,7 @@ class Armstrong {
             n = n / 10;
 
         }
+        sc.close();
         System.out.println();
         System.out.println(num);
         System.out.println(sum);
