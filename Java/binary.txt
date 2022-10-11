@@ -1,0 +1,71 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+//Complete the following function.
+
+
+void calculate_the_maximum(int n, int m) {
+  float A[100000],O[100000],X[100000],f,a,o,x,m1,m2,m3;
+  int i,j,k=0,l=0,q=0;
+  for(i=1;i<=m;i++)
+  {
+      for(j=i+1;j<=n;j++)
+      {
+          a=i&j;
+          o=i|j;
+          x=i^j;
+          A[k++]=a;
+          O[l++]=o;
+          X[q++]=x;
+      }
+  }
+  f=(n*(n-1) - (n-m-1)*(n-m))/2;
+  for(i=0;i<f;i++)
+    {
+        if(A[i]<m)
+        m1=A[i];
+        break;
+    }
+  for(i=0;i<f;i++)
+    {
+        if(O[i]<m)
+        m2=O[i];
+        break;
+    }
+  for(i=0;i<f;i++)
+    {
+        
+        if(X[i]<m)
+        m3=X[0];
+        break;
+    }
+  for(i=1;i<f;i++)
+  {
+      if(m1<A[i]&&A[i]<m)
+      {
+          m1=A[i];
+      }
+      if(m2<O[i]&&O[i]<m)
+      {
+          m2=O[i];
+      }
+      if(m3<X[i]&&X[i]<m)
+      {
+          m3=X[i];
+      }
+  }
+  printf("%f\n%f\n%f",m1,m2,m3);
+}
+
+int main() {
+    int n, m;
+  
+    scanf("%d %d", &n, &m);
+    if(n>=2&&n<=1000&&m>=2&&m<=n)
+    {
+        calculate_the_maximum(n, m);
+    }
+    else
+    return 0;
+}
