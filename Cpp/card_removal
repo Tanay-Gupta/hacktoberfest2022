@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    int n;
+    cin>>n;
+    vector<int> a(n);
+    map<int, int> mp;
+    int maxi=INT_MIN;
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    for(int i=0;i<n;i++)
+    {
+        mp[a[i]]++;
+    }
+    for(auto it:mp)
+    {
+        maxi=max(maxi,it.second);
+    }
+    cout<<n-maxi<<endl;
+   
+    
+  
+}
+
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        solve();cout<<endl;
+    }
+}
