@@ -1,0 +1,27 @@
+int i,*sa,*so;
+    scanf("%d %d\n%d %d\n%d %d",&s,&t,&a,&b,&m,&n);
+    apples=(int*)malloc(100*sizeof(int));
+    oranges=(int*)malloc(100*sizeof(int));
+    sa=(int*)malloc(100*sizeof(int));
+    so=(int*)malloc(100*sizeof(int));
+    for(i=0;i<m;i++)
+    {
+        scanf("%d",(apples+i));
+        *(sa+i)=*(apples+i)+a;
+    }
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",(oranges+i));
+        *(so+i)=*(oranges+i)+b;
+    }
+    for(i=0;i<m;i++)
+    {
+        if(*(sa+i)>=a)
+        printf("%d ",*(sa+i));
+    }
+    for(i=0;i<n;i++)
+    {
+        if(*(so+i)<=b)
+        printf("%d ",*(so+i));
+    }
+}
