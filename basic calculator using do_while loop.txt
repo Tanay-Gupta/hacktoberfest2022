@@ -1,0 +1,40 @@
+#include<stdio.h>
+int main()    
+{
+    float a,b,c;
+    int d;
+    char x,ch;
+    printf("Entre + for addition.\nEnter - for substraction.\nEnter * for multiplication\nEnter / for division.\nEnter %% for modulus.\n");
+    do
+    {
+        
+        printf("Input the operation\n");
+        scanf(" %c",&x);
+        printf("Enter the value of operands\n");
+        scanf("%f%f",&a,&b);
+        switch (x)
+        {
+            case '+': c=a+b;
+                printf("%f + %f = %f\n",a,b,c);
+            break;
+            case '-': c=a-b;
+                printf("%f - %f = %f\n",c);
+            break;
+            case '*': c=a*b;
+                printf("%f * %f = %f\n",a,b,c);
+            break;
+            case '/': c=a/b;
+                printf("%f / %f = %f\n",a,b,c);
+            break;
+            case '%': c=(int)a%(int)b;
+                      d=c;
+                printf("%f %% %f = %d\n",a,b,d);
+            break;
+            default: printf("invalid input\n");
+            break;
+        }
+        printf("press y to continue and n to exit_");
+        scanf (" %c", &ch);
+    }while (ch == 'y');
+        return 0;
+}
